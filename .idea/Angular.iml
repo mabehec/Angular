@@ -6,6 +6,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="angular-animate" level="application" />
     <orderEntry type="library" name="angular" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="jquery.signalr-2.1.0" level="application" />
   </component>
 </module>
 
