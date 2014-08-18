@@ -22,12 +22,17 @@ controleur.controller('signalar', function( $scope){
     });
 });
 
-controleur.controller('getSpectacle2', function ($scope, dataArtishow){
-
+controleur.controller('getSpectacle', function ($scope, dataArtishow){
+    $scope.spectacleChoisi =""
     dataArtishow.spectacles.get(function(response){
-    $scope.data2 = response
+    $scope.spectacles = response
 
     })
 
+    $scope.$watch("spectacleChoisi", function(){
+        dataArtishow.representations.get({nospectacle:$scope.spectacleChoisi.C_NOSPECTACLE},function(response){
+           $scope.representation = response
 
+        })
+    });
 });

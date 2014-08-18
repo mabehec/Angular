@@ -25,6 +25,14 @@
     <button ng-click="monitor()">test</button>
 </div>-->
 
-<div ng-controller="getSpectacle2">{{ data2 }} </div>
+<div ng-controller="getSpectacle">
+    <div>{{ spectacle }}</div>
+    <div ng-repeat ="spectacle in spectacles">{{ spectacle.C_NOSPECTACLE }}, {{ spectacle.C_ARTISTE }}  </div>
+    <select ng-model ="spectacleChoisi" ng-options ="spectacle.C_ARTISTE for spectacle in spectacles">
+    </select>
+   <div> {{ spectacleChoisi }}</div>
+<h1 >statistiques</h1>
+    <div>{{ representation }}</div>
 
+</div>
 </html>
